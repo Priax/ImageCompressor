@@ -1,6 +1,6 @@
 # imageCompressor
 
-This project's goal was to make an image compressor fully in haskell using clustering.
+This project's goal was to make an image compressor using the "kMeans" algorithm, fully in haskell using clustering.
 This was made on Fedora linux using Haskell and stack to build.
 
 Each colors of the image are grouped into "Clusters", then, based on the number of colors you want, it chooses the most prevalent colors to keep, making a compressed image.
