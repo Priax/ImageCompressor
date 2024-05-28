@@ -21,4 +21,15 @@ You can test it doing this:
 
 And Voilà ! You have a compressed image :D
 
+Example with 4 colors:
+
+<div style="display: flex;">
+    <div style="flex: 1;">
+        <img src="./example/RinWitch.jpg" alt="Image of Rin Tezuka as a Witch" width="150">
+    </div>
+    <div style="flex: 1;">
+        <img src="./example/rin.png" alt="Image of Rin Tezuka as a Witch, but compressed" width="150">
+    </div>
+</div>
+
 It was a fun project to do, a bit hard because doing this type of algorithm in Haskell is hard, but I like the result !
