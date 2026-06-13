@@ -15,7 +15,7 @@ all: $(NAME)
 
 $(NAME):
 	stack build
-	cp $(shell stack path --local-install-root)/bin/imageCompressor-exe imageCompressor
+	cp $(shell stack path --local-install-root)/bin/imageCompressor imageCompressor
 
 $(OBJ):
 	stack ghc -- -c ./app/$(SRC)
