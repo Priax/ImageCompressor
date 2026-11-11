@@ -3,17 +3,10 @@
 # For more information, please see the documentation at:
 #   https://docs.haskellstack.org/en/stable/topics/lock_files
 
-packages:
-- completed:
-    hackage: vector-0.13.2.0@sha256:47cd3fb53bd7670d3aaf116e4915a81bf553e2be6d963237a7e2b459a5343eb7,8804
-    pantry-tree:
-      sha256: f71e4320f51b395640f80fedb2c75ebc9936de363754975e0ef338468a9fca80
-      size: 4478
-  original:
-    hackage: vector-0.13.2.0@sha256:47cd3fb53bd7670d3aaf116e4915a81bf553e2be6d963237a7e2b459a5343eb7,8804
+packages: []
 snapshots:
 - completed:
-    sha256: 2763632e4c4094ce12f5ae12b22f524cdc6453b6b19007ff164a37fd9d2ea829
-    size: 683819
-    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/23/17.yaml
-  original: lts-23.17
+    sha256: d90478ae1e8ef7e9ba968834ebe4ecfb8f27f5b9c259b8b01f802b0c0dc999a7
+    size: 731889
+    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/24/66.yaml
+  original: lts-24.66

@@ -15,9 +15,9 @@ extra-source-files:
 dependencies:
   - base >= 4.7 && < 5
   - bytestring >= 0.11
-  - containers >= 0.6
+  - vector-algorithms >= 0.9
   - vector     >= 0.13
-  - random     >= 1.2
+  - random     >= 1.2.1
 
 ghc-options:
   - -Wall
@@ -28,10 +28,10 @@ ghc-options:
   - -Wmissing-export-lists
   - -Wpartial-fields
   - -Wredundant-constraints
+  - -O2
 
-default-extensions:
-  - BangPatterns
-  - OverloadedStrings
+# GHC2024 edition: Haskell 2010 plus the extensions GHC considers stable.
+language: GHC2024
 
 library:
   source-dirs: src
@@ -44,7 +44,6 @@ executables:
       - -threaded
       - -rtsopts
       - -with-rtsopts=-N
-      - -O2
     dependencies:
       - imageCompressor
 

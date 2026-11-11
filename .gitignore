@@ -1,2 +1,6 @@
 .stack-work/
+dist-newstyle/
 *.out
+*.o
+*.hi
+/imageCompressor

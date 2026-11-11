@@ -1,38 +1,30 @@
 ##
 ## EPITECH PROJECT, 2024
-## B-PDG-300-MAR-3-1-PDGD02-vincent.montero-fontaine
+## B-FUN-400-MAR-4-1-compressor-vincent.montero-fontaine
 ## File description:
 ## Makefile
 ##
 
-SRC = Main.hs
-
 NAME = imageCompressor
-
-OBJ = $(NAME).o $(NAME).hi
 
 all: $(NAME)
 
+# stack decides itself whether something must be rebuilt.
 $(NAME):
 	stack build
-	cp $(shell stack path --local-install-root)/bin/imageCompressor imageCompressor
-
-$(OBJ):
-	stack ghc -- -c ./app/$(SRC)
+	cp $(shell stack path --local-install-root)/bin/$(NAME) $(NAME)
 
 clean:
 	stack clean
-	rm -f $(NAME)
-	@find . -type f \( -name "*.hi" -o -name "*.o" \) -delete
 
 fclean: clean
+	rm -f $(NAME)
 	find . -type f \( -name "*~" -o \( -name "*#" -a -name "#*" \) \) -delete
-	find . -type f \( -name "*.hi" -o -name "*.o" \) -delete
 	rm -f coding-style-reports.log
 
 style: fclean
 	lambdananas .
 
-re:	fclean all
+re: fclean all
 
-.PHONY: clean fclean style re
+.PHONY: all $(NAME) clean fclean style re

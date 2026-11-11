@@ -3,7 +3,9 @@
 This project's goal was to make an image compressor using the "kMeans" algorithm, fully in haskell using clustering.
 This was made on Fedora linux using Haskell and stack to build.
 
-Each colors of the image are grouped into "Clusters", then, based on the number of colors you want, it chooses the most prevalent colors to keep, making a compressed image.
+The pixels are grouped into as many "clusters" as the number of colors you want: each cluster gets the average color of its pixels (k-means, seeded with k-means++), which gives the compressed image.
+
+The k-means runs on the distinct colors of the image weighted by their number of pixels, and its iterations use every core.
 
 How to compile:
 
@@ -15,11 +17,13 @@ You can test it doing this:
 
 ```
 ./ic_tools_fedora36/convertImg your_image > converted_img.txt
-./imageCompressor -n NbColors -l convergenceNb (for example 0.08) -f converted_img.txt > compressed_img.txt
+./imageCompressor -n NbColors -l convergenceNb (for example 0.08) -f converted_img.txt [-s seed] > compressed_img.txt
 ./ic_tools_fedora36/xpmImg compressed_img.txt > compressed.xpm
 ```
 
 And Voilà ! You have a compressed image :D
+
+The optional `-s` sets the seed of the random generator, to get the same result on every run. On error (invalid arguments or input file), the program prints the reason on stderr and exits with code 84.
 
 Example with 4 colors:
 
